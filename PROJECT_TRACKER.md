@@ -9,7 +9,7 @@ This tracker records the planned work for the Arcana high-fantasy magic mod.
 - **Planned** — approved for a future build
 - **Backlog** — ideas to evaluate later
 
-## Current release: 0.2.0 — Progression Foundation
+## Current release: 0.3.0 — Playable Skill Tree Foundation
 
 ### Completed
 
@@ -34,28 +34,31 @@ This tracker records the planned work for the Arcana high-fantasy magic mod.
 
 Priority: **High**
 
-- [ ] Add persistent skill points
-- [ ] Add configurable ways to earn skill points
-- [ ] Add basic skill-tree data model
-- [ ] Add first skill-tree screen
-- [ ] Add Arcane Bolt range upgrade
+- [x] Add persistent skill points
+- [x] Award one skill point per XP level
+- [x] Add basic skill-tree data model
+- [x] Add first skill-tree screen on K
+- [x] Add Arcane Bolt range upgrade
 - [ ] Add Arcane Bolt damage upgrade
-- [ ] Make Mana Crystal increase maximum mana
+- [x] Make Attunement skill increase maximum mana
 - [ ] Make Sage's Ring improve mana regeneration
 - [ ] Make Arcane Focus improve spell damage or range
 - [ ] Make Blinkstone reduce Blink cooldown
 - [ ] Make Ward Sigil improve Ward duration or strength
 
-## Milestone: spell hotbar
+## Next milestone: spell hotbar
 
 Priority: **High**
 
 - [ ] Add 4–8 spell slots
+- [ ] Add server-synced selected spell state
+- [ ] Add spell selection packet validation
+- [ ] Make V cast the selected spell instead of a fixed spell
 - [ ] Add selected-spell HUD display
 - [ ] Add number-key spell selection
 - [ ] Add mouse-wheel spell selection
 - [ ] Display spell cooldowns
-- [ ] Validate selected spells on the server
+- [ ] Add hotbar layout to the Arcana guide book
 
 ## Milestone: spell upgrades and presentation
 
@@ -117,4 +120,4 @@ A feature is complete when it works in singleplayer and on a dedicated multiplay
 
 ## Current next action
 
-Implement the progression foundation: skill points, a basic skill-tree model, and the first upgradeable Arcane Bolt and mana-item effects.
+Implement the spell hotbar foundation: a server-validated selected-spell state, three spell slots for Arcane Bolt, Blink, and Ward, number-key selection, and a HUD display.
