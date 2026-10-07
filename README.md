@@ -27,6 +27,8 @@ The packages intentionally separate capability, networking, spells, entities, an
 
 ## Crafting diagrams
 
+![Arcana crafting recipes](docs/crafting-recipes.svg)
+
 Use a crafting table. Each diagram is read left-to-right, top-to-bottom. `_` means an empty slot.
 
 ### Mana Crystal
