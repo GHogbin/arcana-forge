@@ -1,5 +1,7 @@
 # Arcana — Forge 1.20.1
 
+Current build: **0.2.0 — Progression Foundation**. See [VERSION.md](VERSION.md) for build alignment and release history.
+
 Starter high-fantasy spellcasting mod for Minecraft 1.20.1 / Forge 47.4.0 / Java 17.
 
 ## Build and run

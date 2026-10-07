@@ -3,7 +3,7 @@ loaderVersion="[47,)"
 license="MIT"
 [[mods]]
 modId="arcana"
-version="0.1.0"
+version="0.2.0"
 displayName="Arcana"
 authors="Arcana Team"
 description='''High-fantasy server-authoritative spellcasting foundation.'''

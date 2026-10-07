@@ -9,7 +9,7 @@ This tracker records the planned work for the Arcana high-fantasy magic mod.
 - **Planned** — approved for a future build
 - **Backlog** — ideas to evaluate later
 
-## Current release: 0.1.0
+## Current release: 0.2.0 — Progression Foundation
 
 ### Completed
 
