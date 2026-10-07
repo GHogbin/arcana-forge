@@ -1,0 +1,3 @@
+package com.example.arcana.network;
+import com.example.arcana.capability.ManaCapability; import net.minecraft.network.FriendlyByteBuf; import net.minecraftforge.network.NetworkEvent; import java.util.function.Supplier;
+public record UpgradeSkillPacket(String skill){public static void encode(UpgradeSkillPacket p,FriendlyByteBuf b){b.writeUtf(p.skill,32);}public static UpgradeSkillPacket decode(FriendlyByteBuf b){return new UpgradeSkillPacket(b.readUtf(32));}public static void handle(UpgradeSkillPacket p,Supplier<NetworkEvent.Context>s){var c=s.get();c.enqueueWork(()->{var player=c.getSender();if(player!=null&&p.skill.equals("bolt_range"))player.getCapability(ManaCapability.TYPE).ifPresent(ManaData->ManaData.upgradeBoltRange());});c.setPacketHandled(true);}}
