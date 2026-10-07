@@ -14,7 +14,7 @@ Starter high-fantasy spellcasting mod for Minecraft 1.20.1 / Forge 47.4.0 / Java
 
 ## Controls
 
-Press **V** to cast Arcane Bolt, **B** to Blink up to 12 blocks, and **N** to activate Ward. Arcane Bolt ignores gravity and travels 32 blocks by default; its range is isolated as an upgrade-ready value. The spells are server-authoritative: the client sends only a cast request; the server validates cooldown and mana, performs the action, and broadcasts effects.
+Press **V** to cast Arcane Bolt, **B** to Blink up to 12 blocks, **N** to activate Ward, and **K** to open the skill tree. The first skill-tree nodes upgrade maximum mana and Arcane Bolt range. Arcane Bolt ignores gravity and travels 32 blocks by default; its range is upgradeable. The spells and upgrades are server-authoritative.
 
 ## Included vertical slice
 
