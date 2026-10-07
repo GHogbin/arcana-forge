@@ -1,0 +1,3 @@
+package com.example.arcana.entity;
+import com.example.arcana.Arcana; import net.minecraft.world.entity.EntityType; import net.minecraft.world.entity.MobCategory; import net.minecraftforge.registries.*;
+public final class ArcanaEntities {public static final DeferredRegister<EntityType<?>> ENTITIES=DeferredRegister.create(ForgeRegistries.ENTITY_TYPES,Arcana.MOD_ID);public static final RegistryObject<EntityType<ArcanaBoltEntity>> ARCANE_BOLT=ENTITIES.register("arcane_bolt",()->EntityType.Builder.<ArcanaBoltEntity>of(ArcanaBoltEntity::new,MobCategory.MISC).sized(.25f,.25f).clientTrackingRange(64).updateInterval(1).build("arcane_bolt"));}

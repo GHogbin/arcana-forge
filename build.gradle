@@ -1,0 +1,23 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+version = '0.1.0'
+group = 'com.example.arcana'
+base { archivesName = 'arcana' }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft { mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+    runs {
+        configureEach { workingDirectory project.file('run'); property 'forge.logging.markers', 'REGISTRIES'; property 'forge.logging.console.level', 'debug'; mods { arcana { source sourceSets.main } } }
+        client { property 'forge.enabledGameTestNamespaces', 'arcana' }
+        server { property 'forge.enabledGameTestNamespaces', 'arcana'; args '--nogui' }
+    }
+}
+repositories { maven { url = 'https://maven.minecraftforge.net' } }
+dependencies { minecraft 'net.minecraftforge:forge:1.20.1-47.4.0' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

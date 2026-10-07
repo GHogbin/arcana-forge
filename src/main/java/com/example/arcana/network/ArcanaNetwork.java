@@ -1,0 +1,6 @@
+package com.example.arcana.network;
+import com.example.arcana.Arcana; import com.example.arcana.capability.ManaCapability; import com.example.arcana.spell.ArcaneBoltSpell; import net.minecraft.server.level.ServerPlayer; import net.minecraftforge.network.NetworkRegistry; import net.minecraftforge.network.simple.SimpleChannel; import net.minecraftforge.network.PacketDistributor;
+public final class ArcanaNetwork { public static final SimpleChannel CHANNEL=NetworkRegistry.newSimpleChannel(Arcana.id("main"),()->"1", "1"::equals,"1"::equals); private static int id; public static void init(){CHANNEL.registerMessage(id++,CastSpellPacket.class,CastSpellPacket::encode,CastSpellPacket::decode,CastSpellPacket::handle);CHANNEL.registerMessage(id++,ManaSyncPacket.class,ManaSyncPacket::encode,ManaSyncPacket::decode,ManaSyncPacket::handle);}
+ public static void sync(ServerPlayer p){p.getCapability(ManaCapability.TYPE).ifPresent(m->CHANNEL.send(PacketDistributor.PLAYER.with(()->p),new ManaSyncPacket(m.get(),m.max())));}
+ public static void cast(ServerPlayer p,String spell){switch(spell){case "arcane_bolt"->ArcaneBoltSpell.cast(p);case "blink"->ArcaneBoltSpell.blink(p);case "ward"->ArcaneBoltSpell.ward(p);default->{}}}
+}

@@ -1,0 +1,3 @@
+package com.example.arcana.network;
+import net.minecraft.network.FriendlyByteBuf; import net.minecraftforge.network.NetworkEvent; import java.util.function.Supplier;
+public record CastSpellPacket(String spell){ public static void encode(CastSpellPacket p,FriendlyByteBuf b){b.writeUtf(p.spell,32);} public static CastSpellPacket decode(FriendlyByteBuf b){return new CastSpellPacket(b.readUtf(32));} public static void handle(CastSpellPacket p,Supplier<NetworkEvent.Context> s){var c=s.get(); c.enqueueWork(()->{if(c.getSender()!=null)ArcanaNetwork.cast(c.getSender(),p.spell);}); c.setPacketHandled(true);}}

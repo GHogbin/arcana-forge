@@ -1,0 +1,3 @@
+package com.example.arcana.network;
+import com.example.arcana.client.ArcanaClient; import net.minecraft.network.FriendlyByteBuf; import net.minecraftforge.network.NetworkEvent; import java.util.function.Supplier;
+public record ManaSyncPacket(float mana,float max){public static void encode(ManaSyncPacket p,FriendlyByteBuf b){b.writeFloat(p.mana);b.writeFloat(p.max);}public static ManaSyncPacket decode(FriendlyByteBuf b){return new ManaSyncPacket(b.readFloat(),b.readFloat());}public static void handle(ManaSyncPacket p,Supplier<NetworkEvent.Context>s){var c=s.get();c.enqueueWork(()->ArcanaClient.mana=p.mana());c.setPacketHandled(true);}}
