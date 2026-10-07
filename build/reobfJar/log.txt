@@ -152,6 +152,9 @@ Writing Output: C:\Users\oscar\Documents\Codex\2026-10-07\referenced-chatgpt-con
   assets/arcana/
   assets/arcana/lang/
   assets/arcana/lang/en_us.json
+  assets/arcana/textures/
+  assets/arcana/textures/gui/
+  assets/arcana/textures/gui/arcana_ui_assets.png
   com/
   com/example/
   com/example/arcana/
