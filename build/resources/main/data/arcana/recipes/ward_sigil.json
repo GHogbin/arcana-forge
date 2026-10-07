@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","pattern":["ABA","BEB","ABA"],"key":{"A":{"item":"minecraft:amethyst_shard"},"B":{"item":"minecraft:iron_ingot"},"E":{"item":"minecraft:emerald"}},"result":{"item":"arcana:ward_sigil"}}

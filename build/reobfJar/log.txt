@@ -175,6 +175,12 @@ Writing Output: C:\Users\oscar\Documents\Codex\2026-10-07\referenced-chatgpt-con
   com/example/arcana/spell/ArcaneBoltSpell.class
   data/
   data/arcana/
+  data/arcana/recipes/
+  data/arcana/recipes/arcane_focus.json
+  data/arcana/recipes/blinkstone.json
+  data/arcana/recipes/mana_crystal.json
+  data/arcana/recipes/sages_ring.json
+  data/arcana/recipes/ward_sigil.json
   data/arcana/spells/
   data/arcana/spells/arcane_bolt.json
   pack.mcmeta
